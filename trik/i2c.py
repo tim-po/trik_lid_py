@@ -1,5 +1,4 @@
 import os
-import time
 
 
 def convert_base(num, to_base=10, from_base=10):
@@ -183,4 +182,3 @@ class Analog:
         :return:
         """
         return os.system("i2cget -y 2 0x48 " + port.adress)
-
