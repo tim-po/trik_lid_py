@@ -7,12 +7,14 @@
 ### Силовые двигатели
 
 Каждый двигатель - это объект, содержащий несколько полей: port(порт, к которому должен быть подключен двигатель), current_power(текущая мощность двигетля), address(I2C адрес двигателя) и два других.
-```class Motor1:
-       port = "M1"
-       current_power = 0
-       address = "0x14"
-       PWM_address = "0x10"
-       endocoder_address = "0x30"```
+```
+class Motor1:
+    port = "M1"
+    current_power = 0
+    address = "0x14"
+    PWM_address = "0x10"
+    endocoder_address = "0x30"
+```
 
 Для иницаилизации мотора нужно написать следующий код:
 ```Motor1 = Motors.Motor1```
