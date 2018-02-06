@@ -28,11 +28,30 @@ def enter_i2c_command(type_of_command="set", address="", value=0, mode=""):
         to_base=16
     )
     result = os.system(
-        "i2" + type_of_command + " -y 2 0x48 0x" +
+        "i2c" + type_of_command + " -y 2 0x48 " +
         address + " " +
         value + " " +
         mode
     )
+    return result
+
+
+def get_i2c_command(type_of_command="set", address="", value=0, mode=""):
+    """
+
+    :param type_of_command: Принимает значение get для получения или set
+    :param address: Адресс устройства для обращения
+    :param value: задаваемое значение в 16ричной системе
+    :param mode: w для двухбайтового значения b для однобайтового значения value
+    :return: Результат выполнения
+    """
+    value = convert_base(
+        value,
+        to_base=16
+    )
+    result = "i2c" + type_of_command + " -y 2 0x48 " + address + " " + value \
+             + " " + mode + "& "
+
     return result
 
 
@@ -85,19 +104,22 @@ class Motors:
         )
 
     @staticmethod
-    def set_power(new_power, motor):
+    def set_power(new_power, motors):
         """
         Переопределние скорости вращения двигателя
         :param new_power: Значение, на кототорое нужно изменить текущую скорость
-        :param motor: Класс мотора
+        :param motors: Лист классов Motor
         :return:
         """
-        motor.current_power = new_power
+        commands = ""
+        for motor in motors:
+            motor.current_power = new_power
 
-        enter_i2c_command(
-            address=motor.address,
-            value=motor.current_power
-        )
+            commands += get_i2c_command(
+                address=motor.address,
+                value=motor.current_power
+            )
+        os.system(commands)
 
     @staticmethod
     def get_power(motor):
@@ -112,18 +134,53 @@ class Motors:
         )
 
     @staticmethod
-    def stop_motor(motor):
+    def stop_motor(motors):
         """
         Остановить мотор(поставить значение мощности на 0)
-        :param motor: Класс мотора
+        :param motors: Лист классов моторов
         :return:
         """
-        enter_i2c_command(
-            address=motor.address
-        )
+        commands = ""
+        for motor in motors:
+            motor.current_power = 0
+            commands += get_i2c_command(
+                address=motor.address
+            )
+
+        os.system(commands)
 
 
-Motor3 = Motors.Motor3
-Motors.set_power(100, Motor3)
-time.sleep(3)
-Motors.stop_motor(Motor3)
+class Analog:
+    class Port1:
+        port = "JA1"
+        adress = "0x25"
+
+    class Port2:
+        port = "JA2"
+        adress = "0x24"
+
+    class Port3:
+        port = "JA3"
+        adress = "0x23"
+
+    class Port4:
+        port = "JA4"
+        adress = "0x22"
+
+    class Port5:
+        port = "JA5"
+        adress = "0x21"
+
+    class Port6:
+        port = "JA6"
+        adress = "0x20"
+
+    @staticmethod
+    def get_analog_port_value(port):
+        """
+        Получения значения аналогового датчика
+        :param port: Класс датчика
+        :return:
+        """
+        return os.system("i2cget -y 2 0x48 " + port.adress)
+
