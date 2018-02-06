@@ -27,8 +27,9 @@ class Motor1:
 
 Также, внизу приведен код, в котором инициализируются и работают на полной мощности в течении 4 секунд 2 мотора:
 
-```from trik.i2c import Motors
-import time
+```
+from trik.i2c import Motors  # класс для работы с моторами 
+import time  # библиотека для работы со временем
 
 Motor1 = Motors.Motor1  # Инициализация мотора 1
 Motor2 = Motors.Motor2  # Инициализация мотора 2
