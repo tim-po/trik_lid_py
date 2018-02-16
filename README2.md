@@ -22,3 +22,4 @@ var go_straight = function ()
     script.wait(5);
 }
 ```
+![Прохождение лабиринта](https://drive.google.com/open?id=1JwgKXtXKUFYGASku9PvERIDfQ-Up2_cQ/1.gif)
