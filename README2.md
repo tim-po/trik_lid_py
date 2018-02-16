@@ -22,4 +22,4 @@ var go_straight = function ()
     script.wait(5);
 }
 ```
-![Прохождение лабиринта](http://ibb.co/kNY6t7)
+![alt text](http://ibb.co/kNY6t7)
