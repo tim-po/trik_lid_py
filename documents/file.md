@@ -1,2 +1,2 @@
 <h3> Трик </h3>
-![Смешной мем про Трик](https://i.stack.imgur.com/9Ifmj.gif)
+![Смешной мем про Трик](https://hsto.org/files/fb1/c66/6dd/fb1c666ddf68468e9007ef955d07cc8f.png)
