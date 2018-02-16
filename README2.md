@@ -22,6 +22,4 @@ var go_straight = function ()
     script.wait(5);
 }
 ```
-![image](http://image.ibb.co/hHNzD7/2018_02_16_23_46_16.png "This is a tooltip"){: width=200px}
-
-<img src="http://image.ibb.co/hHNzD7/2018_02_16_23_46_16.png" style="width: 70px;"/>
+![image](http://image.ibb.co/hHNzD7/2018_02_16_23_46_16.png "This is a tooltip")
