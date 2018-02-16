@@ -8,7 +8,7 @@
   r = d / 2; // радиус колеса
 ```
 
-<h2> Прямолинейное движение: </h2>
+<h3> Прямолинейное движение: </h3>
 
 ```
 var go_straight = function () 
@@ -22,4 +22,5 @@ var go_straight = function ()
     script.wait(5);
 }
 ```
-![image](http://image.ibb.co/hHNzD7/2018_02_16_23_46_16.png "This is a tooltip")
+<h3> Прохождение лабиринта: </h3>
+![image](http://image.ibb.co/bX3Zfn/2018_02_17_0_00_11.png "This is a tooltip")
