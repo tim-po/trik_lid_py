@@ -1,2 +1,2 @@
 <h3> Трик </h3>
-![Смешной мем про Трик](https://hsto.org/files/fb1/c66/6dd/fb1c666ddf68468e9007ef955d07cc8f.png)
+![Смешной мем про Трик](http://risovach.ru/upload/2018/02/mem/paren-zasmotrelsya-na-druguju-devushku_168350696_orig_.jpg)
