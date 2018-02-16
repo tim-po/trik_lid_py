@@ -23,4 +23,92 @@ var go_straight = function ()
 }
 ```
 <h3> Прохождение лабиринта: </h3>
-![alt text]((http://image.ibb.co/bX3Zfn/2018_02_17_0_00_11.png)
+![alt text](http://image.ibb.co/bX3Zfn/2018_02_17_0_00_11.png)
+Код:
+Функция для корректировки движения:
+```
+regulyator = function()
+{
+	
+	while (true) {
+		if (!(brick.sensor(A1).read() > threshold || brick.sensor(A2).read() > threshold))
+    {
+			break;
+		}
+		err = brick.sensor(A2).read() - threshold;
+		u = err * 10;
+		brick.motor(M3).setPower(70 + u);
+		
+		brick.motor(M4).setPower(70 - u);
+		
+		script.wait(10);
+		
+	}
+	brick.motor(M1).powerOff();
+	brick.motor(M2).powerOff();
+	brick.motor(M3).powerOff();
+	brick.motor(M4).powerOff();
+	
+	return;
+}
+```
+
+Функция для поворота налево:
+
+```
+nalevo = function()
+{
+	
+	brick.motor(M3).setPower(100);
+	brick.motor(M4).setPower(100);
+	
+	script.wait(340);
+	
+	brick.motor(M4).setPower(100);
+	
+	brick.motor(M3).setPower(-(100));
+	
+	script.wait(520);
+	
+	brick.motor(M3).setPower(-(100));
+	brick.motor(M4).setPower(-(100));
+	
+	script.wait(340);
+	
+	brick.motor(M1).powerOff();
+	brick.motor(M2).powerOff();
+	brick.motor(M3).powerOff();
+	brick.motor(M4).powerOff();
+	
+	return;
+	
+}
+```
+
+Применения в гланой функции:
+
+```
+var main = function()
+{
+	__interpretation_started_timestamp__ = Date.now();
+	
+	threshold = 25;
+	brick.motor(M3).setPower(100);
+	brick.motor(M4).setPower(100);
+	
+	script.wait(1000);
+	
+	while (true)
+  {
+		if (brick.sensor(A2).read() <= threshold + 5 && brick.sensor(A1).read() <= threshold + 5) {
+			nalevo();
+			
+		} else {
+			regulyator();
+			
+		}
+		script.wait(0);
+		
+	}
+}
+```
