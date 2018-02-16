@@ -22,4 +22,4 @@ var go_straight = function ()
     script.wait(5);
 }
 ```
-![Прохождение лабиринта](https://drive.google.com/file/d/1JwgKXtXKUFYGASku9PvERIDfQ-Up2_cQ/view?usp=sharing)
+![Прохождение лабиринта](http://ibb.co/kNY6t7)
