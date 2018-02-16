@@ -22,4 +22,4 @@ var go_straight = function ()
     script.wait(5);
 }
 ```
-![alt text](http://ibb.co/kNY6t7)
+![alt text](http://image.ibb.co/hHNzD7/2018_02_16_23_46_16.png)
