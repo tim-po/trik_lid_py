@@ -22,5 +22,5 @@ var go_straight = function ()
     script.wait(5);
 }
 ```
-<img src="http://image.ibb.co/hHNzD7/2018_02_16_23_46_16.png" style="width: 50%;"/>
+<img src="http://image.ibb.co/hHNzD7/2018_02_16_23_46_16.png" style="width: 70px;"/>
 ![alt text](http://image.ibb.co/hHNzD7/2018_02_16_23_46_16.png)
