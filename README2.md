@@ -24,6 +24,7 @@ var go_straight = function ()
 ```
 <h3> Прохождение лабиринта: </h3>
 ![alt text](http://image.ibb.co/bX3Zfn/2018_02_17_0_00_11.png)
+
 Код:
 Функция для корректировки движения:
 ```
@@ -84,9 +85,7 @@ nalevo = function()
 	
 }
 ```
-
 Применения в гланой функции:
-
 ```
 var main = function()
 {
