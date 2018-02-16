@@ -23,4 +23,4 @@ var go_straight = function ()
 }
 ```
 <h3> Прохождение лабиринта: </h3>
-![image](http://image.ibb.co/bX3Zfn/2018_02_17_0_00_11.png "This is a tooltip")
+![image](http://image.ibb.co/bX3Zfn/2018_02_17_0_00_11.png )
