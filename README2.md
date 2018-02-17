@@ -23,7 +23,8 @@ var go_straight = function ()
 }
 ```
 <h3> Прохождение лабиринта: </h3>
-![alt text](http://image.ibb.co/bX3Zfn/2018_02_17_0_00_11.png)
+
+![alt text](http://image.ibb.co/cmmx0n/1.png)
 
 Код:
 Функция для корректировки движения:
