@@ -22,7 +22,9 @@ var go_straight = function ()
     script.wait(5);
 }
 ```
-<h3> Прохождение лабиринта: </h3>
+<h2> </h2>
+<h2> Прохождение лабиринта: </h2>
+<h2> </h2>
 
 ![alt text](http://image.ibb.co/cmmx0n/1.png)
 
